@@ -33,8 +33,9 @@ burials_monthly |>
 
 
 inquests <-
-coroners |> 
-  select(id=rowid, doc_date, parish, the_deceased, gender, verdict, cause_of_death, deceased_additional_info)|>
+coroners |>
+  mutate(url = glue("https://www.londonlives.org/record/{inquisition_img}")) |> 
+  select(id=rowid, doc_date, parish, the_deceased, gender, verdict, cause_of_death, deceased_additional_info, url) |>
   mutate(across(where(is.character ), ~na_if(., "") )) |>
   # simplify additional info
   mutate(deceased_additional_info = case_when(
@@ -82,7 +83,8 @@ coroners |>
     q==2 ~ "Spring",
     q==3 ~ "Summer",
     q==4 ~ "Autumn"
-  ))
+  )) 
+  
   
   
 parishes <-

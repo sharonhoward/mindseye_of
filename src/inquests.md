@@ -299,7 +299,9 @@ const valVerdict = [
 ] ;
 
 ```
-
+```js
+//filterGenderVerdictForm
+```
 ```js
 // table function 
 
@@ -308,7 +310,11 @@ function inquestsTable(data) {
 	layout: "fixed",
 	sort: "doc_date",
 	format: {
-		doc_date: formatDate 
+		doc_date: formatDate ,
+		//url: url => htl.html`<a href=${url} target=_blank>link</a>`,
+		// no idea how this works...
+		// https://observablehq.com/d/1562bdd9c67de3e7
+		the_deceased: (d, i, data) => htl.html`<a href=${data[i].url} target=_blank>${d}</a>`
 	},
   columns: [
     //"id",

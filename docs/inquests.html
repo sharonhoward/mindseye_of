@@ -61,8 +61,8 @@
 import {define} from "./_observablehq/client.2ebf0c42.js";
 import {registerFile} from "./_observablehq/stdlib.73a8ec5a.js";
 
-registerFile("./data/l_inquests/burials-totals.csv", {"name":"./data/l_inquests/burials-totals.csv","mimeType":"text/csv","path":"./_file/data/l_inquests/burials-totals.460eeb6c.csv","lastModified":1763135679369,"size":266});
-registerFile("./data/l_inquests/inquests.csv", {"name":"./data/l_inquests/inquests.csv","mimeType":"text/csv","path":"./_file/data/l_inquests/inquests.0352ce00.csv","lastModified":1763135679365,"size":371697});
+registerFile("./data/l_inquests/burials-totals.csv", {"name":"./data/l_inquests/burials-totals.csv","mimeType":"text/csv","path":"./_file/data/l_inquests/burials-totals.460eeb6c.csv","lastModified":1763144734960,"size":266});
+registerFile("./data/l_inquests/inquests.csv", {"name":"./data/l_inquests/inquests.csv","mimeType":"text/csv","path":"./_file/data/l_inquests/inquests.31dbb0e2.csv","lastModified":1763144734972,"size":518832});
 registerFile("./data/westmr_parishes.geojson", {"name":"./data/westmr_parishes.geojson","mimeType":"application/geo+json","path":"./_file/data/westmr_parishes.e2af4d7b.geojson","lastModified":1762945992459,"size":49163});
 
 define({id: "7d071c97", mode: "inline", inputs: ["d3","inquests_count","display"], body: async (d3,inquests_count,display) => {
@@ -341,7 +341,11 @@ const valVerdict = [
 return {valGender,valVerdict};
 }});
 
-define({id: "160972ce", inputs: ["Inputs","formatDate"], outputs: ["inquestsTable"], body: (Inputs,formatDate) => {
+define({id: "ef38e4e7", body: () => {
+//filterGenderVerdictForm
+}});
+
+define({id: "507c2211", inputs: ["Inputs","formatDate","htl"], outputs: ["inquestsTable"], body: (Inputs,formatDate,htl) => {
 // table function 
 
 function inquestsTable(data) {
@@ -349,7 +353,11 @@ function inquestsTable(data) {
 	layout: "fixed",
 	sort: "doc_date",
 	format: {
-		doc_date: formatDate 
+		doc_date: formatDate ,
+		//url: url => htl.html`<a href=${url} target=_blank>link</a>`,
+		// no idea how this works...
+		// https://observablehq.com/d/1562bdd9c67de3e7
+		the_deceased: (d, i, data) => htl.html`<a href=${data[i].url} target=_blank>${d}</a>`
 	},
   columns: [
     //"id",
@@ -452,7 +460,8 @@ div.ci_summary {font-size:20px; weight: bold; }
 <div class="observablehq observablehq--block"><!--:7b45bd5a:--></div>
 <div class="observablehq observablehq--block"><!--:6c61faf2:--></div>
 <div class="observablehq observablehq--block"><!--:a7cbb03e:--></div>
-<div class="observablehq observablehq--block"><!--:160972ce:--></div>
+<div class="observablehq observablehq--block"><!--:ef38e4e7:--></div>
+<div class="observablehq observablehq--block"><!--:507c2211:--></div>
 <div class="observablehq observablehq--block"><!--:61b5fa6a:--></div>
 </main>
 <footer id="observablehq-footer">
