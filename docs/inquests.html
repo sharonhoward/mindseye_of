@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.3">
+<title>Coroners&#x27; Inquests | In Her Mind&#x27;s Eye</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/custom-styles.03d69ee6.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/custom-styles.03d69ee6.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="./_observablehq/client.2ebf0c42.js">
+<link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.73a8ec5a.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/e780feca.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.4ef1d259.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/d761ef9b.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/86074ef6.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/843b6a76.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/aa00730b.js">
+<link rel="icon" href="./_file/mindseye.dcd5c2e6.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.2ebf0c42.js";
+import {registerFile} from "./_observablehq/stdlib.73a8ec5a.js";
+
+registerFile("./data/l_inquests/burials-totals.csv", {"name":"./data/l_inquests/burials-totals.csv","mimeType":"text/csv","path":"./_file/data/l_inquests/burials-totals.460eeb6c.csv","lastModified":1763135679369,"size":266});
+registerFile("./data/l_inquests/inquests.csv", {"name":"./data/l_inquests/inquests.csv","mimeType":"text/csv","path":"./_file/data/l_inquests/inquests.0352ce00.csv","lastModified":1763135679365,"size":371697});
+registerFile("./data/westmr_parishes.geojson", {"name":"./data/westmr_parishes.geojson","mimeType":"application/geo+json","path":"./_file/data/westmr_parishes.e2af4d7b.geojson","lastModified":1762945992459,"size":49163});
+
+define({id: "7d071c97", mode: "inline", inputs: ["d3","inquests_count","display"], body: async (d3,inquests_count,display) => {
+display(await(
+d3.format(",")(inquests_count)
+))
+}});
+
+define({id: "e24e04b2", mode: "inline", inputs: ["d3","inquests_burials_pct","display"], body: async (d3,inquests_burials_pct,display) => {
+display(await(
+d3.format(".2%")(inquests_burials_pct)
+))
+}});
+
+define({id: "5e694bb6", mode: "inline", inputs: ["d3","burials_sum","display"], body: async (d3,burials_sum,display) => {
+display(await(
+d3.format(",")(burials_sum)
+))
+}});
+
+define({id: "a1bdcd54", inputs: ["view","Inputs","valGender","valVerdict","htl"], outputs: ["genderVerdictForm"], body: (view,Inputs,valGender,valVerdict,htl) => {
+// https://observablehq.com/@tophtucker/horizontal-inputs
+// https://observablehq.com/@martien/inputs
+// this might want a bit more styling to define each input?
+
+const genderVerdictForm = view(
+Inputs.form(
+	{
+  gender: Inputs.checkbox(valGender, {label: "gender", value: valGender }),
+	verdict: Inputs.select(
+				["All"].concat(valVerdict), // sort here if you need to
+				{label: "verdict", unique: true,}
+				) 
+  } ,
+  {
+    template: (inputs) => htl.html`<div style="display: flex; gap: 2em" class="styled">
+    <em>Filter by...</em>
+    <style>
+  div.styled { text-align: right; }
+  div.styled form>label { font-weight: bold; }
+</style>
+  ${Object.values(inputs)}
+</div>`
+  }
+ )
+);
+
+return {genderVerdictForm};
+}});
+
+define({id: "1716b0a5", mode: "inline", inputs: ["mapBurials","parishes_geojson","display"], body: async (mapBurials,parishes_geojson,display) => {
+display(await(
+mapBurials(parishes_geojson)
+))
+}});
+
+define({id: "0aff7d5e", mode: "inline", inputs: ["heatBurials","filterGenderVerdictForm","display"], body: async (heatBurials,filterGenderVerdictForm,display) => {
+display(await(
+heatBurials(filterGenderVerdictForm)
+))
+}});
+
+define({id: "8ceee990", mode: "inline", inputs: ["inquestsTable","filterGenderVerdictForm","display"], body: async (inquestsTable,filterGenderVerdictForm,display) => {
+display(await(
+inquestsTable(filterGenderVerdictForm)
+))
+}});
+
+define({id: "a9535692", inputs: ["Plot","parishInquestsBurialsGenVerMap","parishInquestsBurialsGenVerNIMap","parishInquestsBurialsGenVerNBMap"], outputs: ["mapBurials"], body: (Plot,parishInquestsBurialsGenVerMap,parishInquestsBurialsGenVerNIMap,parishInquestsBurialsGenVerNBMap) => {
+function mapBurials(data) {
+return Plot.plot({
+		title: "Space",
+		//subtitle: "compare gender and verdicts across parishes",
+    projection: {
+    type: "reflect-y",
+    domain: data // "focus" on target polygon
+  },
+  
+  color: {
+    //type: "quantile",
+    //reverse: true,
+    //n: 9,
+    scheme: "oranges",
+    label: "% of parish burials",
+    legend: true
+  },
+
+  marks: [
+    Plot.geo(data, { 
+    		fill: (d) => parishInquestsBurialsGenVerMap.get(d.properties.parish),
+    		//tip: true,
+        channels: {
+      	// label: colname
+      			parish: "parish",
+      			inquests: (d) => parishInquestsBurialsGenVerNIMap.get(d.properties.parish), // filtered count
+      			"burials 1760-99":  (d) => parishInquestsBurialsGenVerNBMap.get(d.properties.parish), // total. 
+      			"population 1800": "pop_1800",
+      		} , 
+  			tip: {
+  					fontSize:13,
+  					lineHeight:1.3,
+    				format: {
+    					parish: true, 
+      				inquests: true,
+      				fill: true, 
+      				burials: true,
+    				} // format
+    			} // /tip
+    	}), // geo
+    	
+  	Plot.geo(data, {stroke: "black", strokeWidth: 0.5}), // ensure boundaries show even if no data.
+
+  ]
+})
+}
+return {mapBurials};
+}});
+
+define({id: "aec268a3", inputs: ["Plot"], outputs: ["heatBurials"], body: (Plot) => {
+function heatBurials(data) {
+return Plot.plot({
+	title: "Time",
+	//subtitle: "changes in gender and verdict composition",
+	//width, // don't want this in the card!
+	padding: 0,
+	marginLeft: 70,
+  grid: true,
+
+	x: {
+			label: null, 
+			domain: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] // put months in right order for doc_month_lab... ought to do this properly really...
+		},  
+  
+	y: {label: null}, 
+  color: {type: "linear", scheme: "Oranges", legend: true, label: "inquests"},
+  
+	marks: [
+		Plot.cell(
+			data,
+			Plot.group(
+				{fill: "count"}, 
+				{ 
+					x: "doc_month_lab", // (d) => d.doc_date.getUTCMonth(), 
+				// with doc_month_lab you have to tell plot the right order
+				// it might be better to use date data but
+				// getUTCMonth() = numbers 0-11 - perhaps it can be told to use labels?	
+				
+				  y:"p5", // don't use tickFormat with decades or p5. 
+				  inset: 0.5,  // inset adds white line between boxes,
+				  tip: {
+				  	format: {x: false, y: false}
+				  }
+				}
+			) // /group
+		) // /cell
+	] // /marks
+
+
+	})
+}
+return {heatBurials};
+}});
+
+define({id: "7d813353", body: () => {
+//To place an input inside a card, first declare a detached input as a top-level variable and use Generators.input to expose its reactive value:
+// put the *Input* in the card 
+// and the generators.input goes in filtering stuff
+
+/*
+// this goes in the card  ${genderVerdictFormInput}
+const genderVerdictFormInput = 	Inputs.form({
+  gender: Inputs.checkbox(valGender, {label: "gender", value: valGender }),
+	verdict: Inputs.select(
+				["All"].concat(valVerdict), // sort here if you need to
+				{label: "verdict", unique: true,}
+				)
+  }); 
+  
+// this goes in filtering [genderVerdictForm was view(Inputs.form())]
+const genderVerdictForm = Generators.input(genderVerdictFormInput); 
+
+*/
+}});
+
+define({id: "58338b10", inputs: ["inquests","genderVerdictForm","d3","burials_totals"], outputs: ["filterGenderVerdictForm","inquestsParishGenderVerdict","parish_gender_verdicts_index","parishInquestsBurialsGenVerProp","parishInquestsBurialsGenVerMap","parishInquestsBurialsGenVerNBMap","parishInquestsBurialsGenVerNIMap"], body: (inquests,genderVerdictForm,d3,burials_totals) => {
+// make filtering data array for table/plot
+// need thing["name"] in each line of the filter
+
+const filterGenderVerdictForm =
+	inquests
+  	.filter((d) => 
+  			genderVerdictForm["gender"].includes(d.gender) 	
+  			&& 
+  			( genderVerdictForm["verdict"] === "All" ||  d.verdict === genderVerdictForm["verdict"] )
+  	)
+  	.map((d) => ({...d}) ) // idk if actually need this
+
+// count inquests per parish
+const inquestsParishGenderVerdict =
+d3.flatRollup(filterGenderVerdictForm, v => v.length, d => d.parish)
+	.map((n) => ({parish: n[0], n: n[1]}))
+	
+	
+const parish_gender_verdicts_index = d3.index(inquestsParishGenderVerdict, d => d.parish)
+
+
+// join parish counts and  burials-totals instead of pop
+// https://observablehq.com/@d3/d3-group
+// (i don't fully understand how it works... )
+// then calculate the rate. (this is when NaNs appear) 
+
+const parishInquestsBurialsGenVerProp =
+	burials_totals
+		.map(({parish: parish, burials}) => ({burials, parish, ...parish_gender_verdicts_index.get(parish)}))
+		.map((d) => ({parish: d.parish, inquests: d.n, burials: d.burials, prop: d.n / d.burials * 100}))
+		
+
+
+// turn the prop array into a Map. this goes into the plot:
+// 	fill: (d) => parishInquestsBurialsGenVerMap.get(d.properties.parish)
+
+const parishInquestsBurialsGenVerMap =
+	new Map(parishInquestsBurialsGenVerProp.map((d) => [d.parish, d.prop]))	
+	
+// for tips, same principle.
+
+// overall count of burials
+const parishInquestsBurialsGenVerNBMap =
+	new Map(parishInquestsBurialsGenVerProp.map((d) => [d.parish, d.burials]))
+	
+// filtered count of inquests
+const parishInquestsBurialsGenVerNIMap =
+	new Map(parishInquestsBurialsGenVerProp.map((d) => [d.parish, d.inquests]))
+
+return {filterGenderVerdictForm,inquestsParishGenderVerdict,parish_gender_verdicts_index,parishInquestsBurialsGenVerProp,parishInquestsBurialsGenVerMap,parishInquestsBurialsGenVerNBMap,parishInquestsBurialsGenVerNIMap};
+}});
+
+define({id: "7b45bd5a", inputs: ["FileAttachment"], outputs: ["inquests","parishes_geojson","burials_totals"], body: (FileAttachment) => {
+//load inquests 
+
+const inquests = FileAttachment("./data/l_inquests/inquests.csv").csv({typed:true})
+
+const parishes_geojson = FileAttachment("./data/westmr_parishes.geojson").json();
+
+const burials_totals = FileAttachment("./data/l_inquests/burials-totals.csv").csv({typed: true});
+return {inquests,parishes_geojson,burials_totals};
+}});
+
+define({id: "6c61faf2", inputs: ["inquests","d3","burials_totals"], outputs: ["inquests_count","burials_sum","inquests_burials_pct"], body: (inquests,d3,burials_totals) => {
+const inquests_count = inquests.length;
+const burials_sum = d3.sum(burials_totals, (d) => d.burials);
+const inquests_burials_pct = inquests_count / burials_sum;
+return {inquests_count,burials_sum,inquests_burials_pct};
+}});
+
+define({id: "a7cbb03e", inputs: ["inquests"], outputs: ["valGender","valVerdict"], body: (inquests) => {
+// for multi inputs for verdict/gender etc
+
+// make array of distinct values using new Set
+const valGender = [
+  ...new Set(
+    inquests  // data source
+      .flatMap((n) => n.gender )
+      .sort()
+  )
+] ;
+
+const valVerdict = [
+	...new Set(
+		inquests 
+			.flatMap((n) => n.verdict )
+			.sort()
+	)
+] ;
+
+return {valGender,valVerdict};
+}});
+
+define({id: "160972ce", inputs: ["Inputs","formatDate"], outputs: ["inquestsTable"], body: (Inputs,formatDate) => {
+// table function 
+
+function inquestsTable(data) {
+ return Inputs.table(data, {
+	layout: "fixed",
+	sort: "doc_date",
+	format: {
+		doc_date: formatDate 
+	},
+  columns: [
+    //"id",
+    "the_deceased",
+    "doc_date",
+    "gender",
+    "verdict",
+    "parish",
+    "cause_of_death",
+   // "deceased_additional_info"
+  ], 
+  header:  {
+    //id: "Id",
+    the_deceased: "name",
+    doc_date: "date",
+    gender: "gender",
+    verdict: "verdict",
+    parish: "parish",
+    "cause_of_death": "cause of death",
+   // "deceased_additional_info": "additional"
+  },
+})
+}
+return {inquestsTable};
+}});
+
+define({id: "61b5fa6a", inputs: ["d3"], outputs: ["formatDate"], body: (d3) => {
+// format dates nicely
+// to get rid of leading 0s in days use %e instead of %d.
+
+const formatDate = d3.utcFormat("%e %b %Y");
+return {formatDate};
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<header id="observablehq-header">
+<navbar><span class="navbar-title"><a href="https://mindseye.sharonhoward.org/" target="_blank" rel="noopener noreferrer">In Her Mind's Eye</a></span> <span class="menu-text"><a href="https://mindseye.sharonhoward.org/dashboards/" target="_blank" rel="noopener noreferrer">Dashboards</a></span></navbar>
+</header>
+<main id="observablehq-main" class="observablehq">
+<style>
+div.ci_summary {font-size:20px; weight: bold; }
+.ci_centred {text-align: center;}
+</style>
+<h1 id="suspicious-deaths-in-18th-century-westminster" tabindex="-1"><a class="observablehq-header-anchor" href="#suspicious-deaths-in-18th-century-westminster">Suspicious deaths in 18th-century Westminster</a></h1>
+<div class="grid grid-cols-3">
+<div class="card">18th-century inquests were usually held soon after a sudden, violent, accidental or unexplained death. This dashboard explores gender and verdicts across nine parishes between 1760 and 1799.</div>
+<div class="card">
+<h2>Inquests</h2>
+	<div class="ci_summary ci_centred"><observablehq-loading></observablehq-loading><!--:7d071c97:--></div>
+	<div class="ci_centred"><observablehq-loading></observablehq-loading><!--:e24e04b2:--> of burials</div>
+</div>
+<div class="card">
+<h2>Burials</h2>
+	<div class="ci_summary ci_centred"><observablehq-loading></observablehq-loading><!--:5e694bb6:--></div>
+	<div class="ci_centred">see notes on sources</div>
+</div>
+</div>
+<div class="observablehq observablehq--block"><!--:a1bdcd54:--></div>
+<div class="grid grid-cols-2">
+  <div class="card">
+  <observablehq-loading></observablehq-loading><!--:1716b0a5:-->
+  </div>
+  <div class="card">
+  <observablehq-loading></observablehq-loading><!--:0aff7d5e:-->
+  </div>
+</div>
+<div class="grid grid-cols-1" style="padding: 0;">
+	<div class="card">
+	<observablehq-loading></observablehq-loading><!--:8ceee990:-->
+	</div>
+</div>
+<div class="grid grid-cols-2">
+<div class="card">
+<h2>Sources</h2>
+<ul>
+<li><a href="https://doi.org/10.5281/zenodo.4402837" target="_blank" rel="noopener noreferrer">Westminster coroners' inquests data</a> (<a href="https://www.londonlives.org/" target="_blank" rel="noopener noreferrer">London Lives</a>)</li>
+<li><a href="https://reshare.ukdataservice.ac.uk/854104/" target="_blank" rel="noopener noreferrer">London weekly bills of mortality, 1644-1849</a> (<a href="https://www.campop.geog.cam.ac.uk/research/projects/migrationmortalitymedicalisation/" target="_blank" rel="noopener noreferrer">Campop</a>).</li>
+</ul>
+<h2>See also</h2>
+<ul>
+<li><a href="https://deathbynumbers.org/" target="_blank" rel="noopener noreferrer">Death by Numbers: the Bills of Mortality project</a></li>
+<li><a href="https://www.londonlives.org/about/ic/" target="_blank" rel="noopener noreferrer">Coroners' Inquests background information</a> (London Lives)</li>
+<li><a href="https://codepen.io/Rbrath/full/rNewgde" target="_blank" rel="noopener noreferrer">Causes of death in Georgian London: index of verbs and objects</a> (Richard Brath)</li>
+</ul>
+</div>
+<div class="card">
+<h2>Notes on sources</h2>
+<p><em>Coroners' inquests</em> were usually held within a few days of a suspicious or unexplained death, at a local alehouse, parish workhouse or in the building in which the death occurred. Deaths among prisoners in custody were also subject to an automatic inquest. The data used here is based on the formal <em>inquest</em>, which identified the deceased, date, location, cause of death and gave the jury's verdict.</p>
+<p>The <em>weekly bills of mortality</em> represent the most complete source of burials data available for London over the 17th and 18th centuries. However, <a href="https://deathbynumbers.org/analysis/religion/" target="_blank" rel="noopener noreferrer">they do not count <em>all</em> deaths</a>, as they exclude burials of Nonconformists (of whom there were growing numbers), Catholics and others outside the Church of England. The Bills probably account for around 90% of burials overall, but levels of nonconformity could vary between parishes.</p>
+</div>
+</div>
+<div class="observablehq observablehq--block"><!--:a9535692:--></div>
+<div class="observablehq observablehq--block"><!--:aec268a3:--></div>
+<div class="observablehq observablehq--block"><!--:7d813353:--></div>
+<div class="observablehq observablehq--block"><!--:58338b10:--></div>
+<div class="observablehq observablehq--block"><!--:7b45bd5a:--></div>
+<div class="observablehq observablehq--block"><!--:6c61faf2:--></div>
+<div class="observablehq observablehq--block"><!--:a7cbb03e:--></div>
+<div class="observablehq observablehq--block"><!--:160972ce:--></div>
+<div class="observablehq observablehq--block"><!--:61b5fa6a:--></div>
+</main>
+<footer id="observablehq-footer">
+<div><a href="https://sharonhoward.org" target="_blank" rel="noopener noreferrer">Sharon Howard</a> | Unless otherwise stated, code and visualisations are <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY SA 4.0</a>.</div>
+</footer>
+</div>
+</body>
+</html>

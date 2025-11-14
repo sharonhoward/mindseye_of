@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.3">
+<title>Cheshire Petitions | In Her Mind&#x27;s Eye</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/custom-styles.03d69ee6.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/custom-styles.03d69ee6.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="./_observablehq/client.2ebf0c42.js">
+<link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.73a8ec5a.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/e780feca.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.4ef1d259.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/d761ef9b.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/86074ef6.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/843b6a76.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/aa00730b.js">
+<link rel="icon" href="./_file/mindseye.dcd5c2e6.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.2ebf0c42.js";
+import {registerFile} from "./_observablehq/stdlib.73a8ec5a.js";
+
+registerFile("./data/l_cheshire_petitions/cheshire-petitions.csv", {"name":"./data/l_cheshire_petitions/cheshire-petitions.csv","mimeType":"text/csv","path":"./_file/data/l_cheshire_petitions/cheshire-petitions.ae8715d4.csv","lastModified":1763135677992,"size":57687});
+
+define({id: "52559c2f", mode: "inline", inputs: ["datesPetitions","display"], body: async (datesPetitions,display) => {
+display(await(
+datesPetitions()
+))
+}});
+
+define({id: "2943f04f", mode: "inline", inputs: ["checkBoxFormInput","display"], body: async (checkBoxFormInput,display) => {
+display(await(
+checkBoxFormInput
+))
+}});
+
+define({id: "d0e90b7e", mode: "inline", inputs: ["respPetitions","display"], body: async (respPetitions,display) => {
+display(await(
+respPetitions()
+))
+}});
+
+define({id: "5fa0fe4d", mode: "inline", inputs: ["wafflePetitions","display"], body: async (wafflePetitions,display) => {
+display(await(
+wafflePetitions()
+))
+}});
+
+define({id: "c49bc05d", mode: "inline", inputs: ["topicsPetitions","display"], body: async (topicsPetitions,display) => {
+display(await(
+topicsPetitions()
+))
+}});
+
+define({id: "28bfa625", mode: "inline", inputs: ["petitionsTable","filterCheckBoxForm","display"], body: async (petitionsTable,filterCheckBoxForm,display) => {
+display(await(
+petitionsTable(filterCheckBoxForm)
+))
+}});
+
+define({id: "9bb065f6", inputs: ["Inputs","valGender","valTopic","valResp","htl","Generators"], outputs: ["checkBoxFormInput","checkBoxForm"], body: (Inputs,valGender,valTopic,valResp,htl,Generators) => {
+//To place an input inside a card, first declare a detached input as a top-level variable and use Generators.input to expose its reactive value:
+// put the *Input* in the card 
+// and the generators.input goes in filtering stuff
+
+// this in the card  ${checkBoxFormInput}
+
+const checkBoxFormInput = 	 
+	Inputs.form({
+  	gender: Inputs.checkbox(valGender, {label: "gender", value: valGender }),
+  	topic: Inputs.checkbox(valTopic, {label: "topic", value: valTopic}),
+  	response: Inputs.checkbox(valResp, {label: "response", value: valResp})
+  } ,
+  {
+    template: (inputs) => htl.html`<div class="styled">
+    <style>
+  
+  div.styled form>label { font-weight: bold; text-align: right;}
+	div.styled form {padding: 4px 0;}
+</style>
+  ${Object.values(inputs)}
+</div>`
+  }
+);
+
+  
+// this goes in filtering [checkBoxForm was view(Inputs.form())]
+const checkBoxForm = Generators.input(checkBoxFormInput); 
+
+
+return {checkBoxFormInput,checkBoxForm};
+}});
+
+define({id: "1c07fbdc", body: () => {
+// view() version (would need styling)
+
+/*const checkBoxForm = view(Inputs.form({
+	// name: each input	(this is internal, not a label)
+  gender: Inputs.checkbox(valGender, {label: "gender", value: valGender }),
+  topic: Inputs.checkbox(valTopic, {label: "topic", value: valTopic}),
+  response: Inputs.checkbox(valResp, {label: "response", value: valResp})
+  }
+  )
+);*/
+}});
+
+define({id: "8e1b79b6", inputs: ["Plot","filterCheckBoxForm"], outputs: ["datesPetitions"], body: (Plot,filterCheckBoxForm) => {
+function datesPetitions() {
+return Plot.plot({
+	title: "Change",
+   y: {grid: true, label: "petitions"},
+   x: {grid:true, label: "year"}, //, tickFormat: formatNum('d')
+   // sort out x formatting
+   marks: [
+     Plot.barY(filterCheckBoxForm, 
+                 Plot.groupX({y: "count"}, {x: "date"}  )
+               ),
+     Plot.ruleY([0])
+   ]
+ })
+}
+return {datesPetitions};
+}});
+
+define({id: "6f668914", inputs: ["Plot","topicColours","filterCheckBoxForm"], outputs: ["topicsPetitions"], body: (Plot,topicColours,filterCheckBoxForm) => {
+function topicsPetitions() {
+return Plot.plot({
+  marginLeft: 100, 
+  height: 300,
+  title: "Topics",
+  x: {grid: true, label: "petitions"},
+  y: {grid:true, label: null},
+  color: topicColours,
+  marks: [
+    Plot.barX(filterCheckBoxForm, 
+                Plot.groupY({x: "count"}, 
+                            {y: "topic", 
+                              fill: "topic", 
+                              tip: true,
+                              sort: {y: "x", reverse: true}
+                            })
+              ),
+    Plot.ruleX([0])
+  ]
+})
+}
+return {topicsPetitions};
+}});
+
+define({id: "41c5bd86", inputs: ["Plot","filterCheckBoxForm"], outputs: ["respPetitions"], body: (Plot,filterCheckBoxForm) => {
+function respPetitions() {
+return Plot.plot({
+  //height: 60, //  ojs issue... not needed here
+  title: "Responses",
+  x: {label: "petitions"},
+  color: { legend: true },
+  marks: [Plot.barX(filterCheckBoxForm, Plot.groupZ({ x: "count" }, { fill: "response", tip: true }))]
+})
+}
+return {respPetitions};
+}});
+
+define({id: "17b23499", inputs: ["Plot","filterCheckBoxForm"], outputs: ["wafflePetitions"], body: (Plot,filterCheckBoxForm) => {
+function wafflePetitions() {
+return Plot.plot({
+	title: "Gender",
+	height: 300,
+  x: {label: "gender"},
+  y: {label: "petitions"},
+  //color: {topicColours, legend: true},
+  marks: [
+    Plot.waffleY(filterCheckBoxForm, 
+      Plot.groupX({y: "count"}, {x: "petition_gender"})
+      /*Plot.groupZ({y: "count"},
+        {fill: "topic", sort: "topic", fx: "petition_gender"} )*/
+    )
+  ]
+})
+}
+return {wafflePetitions};
+}});
+
+define({id: "cb0a236a", inputs: ["cheshire_petitions"], outputs: ["valGender","valTopic","valResp"], body: (cheshire_petitions) => {
+// make array of distinct values using new Set
+const valGender = [
+  ...new Set(
+    cheshire_petitions  // data source
+      .flatMap((n) => n.petition_gender )
+      .sort()
+  )
+] ;
+
+const valTopic = [
+	...new Set(
+		cheshire_petitions 
+			.flatMap((n) => n.topic )
+			.sort()
+	)
+] ;
+
+const valResp = [
+	...new Set(
+		cheshire_petitions 
+			.flatMap((n) => n.response )
+			.sort()
+	)
+];
+return {valGender,valTopic,valResp};
+}});
+
+define({id: "5c7e1e2a", inputs: ["cheshire_petitions","checkBoxForm"], outputs: ["filterCheckBoxForm"], body: (cheshire_petitions,checkBoxForm) => {
+// make filtering data array for table
+// need ["name"] in each line of the filter
+
+const filterCheckBoxForm =
+	cheshire_petitions
+  	.filter((d) =>
+  			checkBoxForm["gender"].includes(d.petition_gender) &&
+  			checkBoxForm["topic"].includes(d.topic) &&
+  			checkBoxForm["response"].includes(d.response)
+  	)
+  	.map((d) => ({...d}) )
+return {filterCheckBoxForm};
+}});
+
+define({id: "55ebd4e4", inputs: ["FileAttachment"], outputs: ["petitions"], body: (FileAttachment) => {
+const petitions = FileAttachment("./data/l_cheshire_petitions/cheshire-petitions.csv").csv({typed: true});
+return {petitions};
+}});
+
+define({id: "c3306997", inputs: ["petitions","formatNum"], outputs: ["cheshire_petitions"], body: (petitions,formatNum) => {
+// don't try to put this in the same chunk as petitions
+// you won't believe what happens to .columns
+
+const cheshire_petitions =
+	petitions.map((d) => ({...d, date: formatNum(d.date2)}))
+return {cheshire_petitions};
+}});
+
+define({id: "8a45bc0a", inputs: ["petitions"], outputs: ["petColumns","petHeader","columnsHeaders"], body: (petitions) => {
+// need to use petitions, not cheshire_petitions
+
+const petColumns = petitions.columns.slice(0,7);
+const petHeader = petColumns.map((d) => d.replace("petition_", "") );
+
+// make key:value pairs for header: in table.
+const columnsHeaders = 
+	Object.fromEntries(
+		petColumns.map((key, index) => [key, petHeader[index]])
+	)
+return {petColumns,petHeader,columnsHeaders};
+}});
+
+define({id: "52383d38", inputs: ["Inputs","d3","petColumns","columnsHeaders"], outputs: ["petitionsTable"], body: (Inputs,d3,petColumns,columnsHeaders) => {
+function petitionsTable(data) {
+ return Inputs.table(data, {
+	layout: "fixed",
+	sort: "year",
+	format: {
+		year: d3.format(".0f") , 
+	},
+  columns: petColumns, 
+  header: columnsHeaders
+})
+}
+return {petitionsTable};
+}});
+
+define({id: "aab9202c", inputs: ["d3"], outputs: ["formatNum"], body: (d3) => {
+// hack stupid date problem
+// date2 column ends up mixed number/strings. Plot fuxxes this up.
+function formatNum(x) {
+  if( Number.isInteger(x)) { 
+    return d3.format(".0f")(x) // If this statement is true return this
+  } else { 
+    return x  // If the first statement was false, return this
+  }
+}
+return {formatNum};
+}});
+
+define({id: "661825a6", inputs: ["Plot"], outputs: ["topicColours"], body: (Plot) => {
+const topicColours = Plot.scale({
+        color: {
+            range: ["#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "#ff7f00", "#fdbf6f", "#e31a1c", "#fb9a99", "#ffed6f", "#8c510a",  "#cab2d6",  "#6a3d9a",  "#80cdc1"], 
+            domain: ["alehouse", "charitable brief", "cottage", "dissenting worship", "employment", "imprisoned debtors", "litigation", "military relief", "officeholding", "other",  "paternity", "poor relief", "rates"]
+        }
+    });
+return {topicColours};
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<header id="observablehq-header">
+<navbar><span class="navbar-title"><a href="https://mindseye.sharonhoward.org/" target="_blank" rel="noopener noreferrer">In Her Mind's Eye</a></span> <span class="menu-text"><a href="https://mindseye.sharonhoward.org/dashboards/" target="_blank" rel="noopener noreferrer">Dashboards</a></span></navbar>
+</header>
+<main id="observablehq-main" class="observablehq">
+<h1 id="cheshire-quarter-sessions-petitions-1573-1798" tabindex="-1"><a class="observablehq-header-anchor" href="#cheshire-quarter-sessions-petitions-1573-1798">Cheshire Quarter Sessions petitions, 1573-1798</a></h1>
+<div class="grid grid-cols-2" style="grid-auto-rows: auto;">
+  <div class="card  grid-rowspan-2">
+  	<observablehq-loading></observablehq-loading><!--:52559c2f:-->
+  </div>
+  <div class="card">
+  <h2>Filter by...</h2>
+  	<observablehq-loading></observablehq-loading><!--:2943f04f:-->
+  </div>
+  <div class="card">
+  	<observablehq-loading></observablehq-loading><!--:d0e90b7e:-->
+  </div>
+</div>
+<div class="grid grid-cols-2">
+  <div class="card">
+  	<observablehq-loading></observablehq-loading><!--:5fa0fe4d:-->
+  </div>
+  <div class="card">
+  	<observablehq-loading></observablehq-loading><!--:c49bc05d:-->
+  </div>
+</div>
+<div class="grid grid-cols-1" style="padding: 0;">
+	<div class="card">
+	<observablehq-loading></observablehq-loading><!--:28bfa625:-->
+	</div>
+</div>
+<div class="grid grid-cols-2">
+<div class="card">
+<h2>About the data</h2>
+<p>Data for 613 petitions addressed to Cheshire magistrates between 1573 and 1798. Data was collected from one year in ten for the 17th and 18th centuries and all surviving petitions before 1600.</p>
+</div>
+<div class="card">
+<h2>Resources</h2>
+<p>See <a href="https://www.british-history.ac.uk/petitions/cheshire" target="_blank" rel="noopener noreferrer">the introduction to the  edition</a> for more details and <a href="https://zenodo.org/records/7027693" target="_blank" rel="noopener noreferrer">The Power of Petitioning Data</a> for the full dataset.</p>
+</div>
+</div>
+<div class="observablehq observablehq--block"><!--:9bb065f6:--></div>
+<div class="observablehq observablehq--block"><!--:1c07fbdc:--></div>
+<div class="observablehq observablehq--block"><!--:8e1b79b6:--></div>
+<div class="observablehq observablehq--block"><!--:6f668914:--></div>
+<div class="observablehq observablehq--block"><!--:41c5bd86:--></div>
+<div class="observablehq observablehq--block"><!--:17b23499:--></div>
+<div class="observablehq observablehq--block"><!--:cb0a236a:--></div>
+<div class="observablehq observablehq--block"><!--:5c7e1e2a:--></div>
+<div class="observablehq observablehq--block"><!--:55ebd4e4:--></div>
+<div class="observablehq observablehq--block"><!--:c3306997:--></div>
+<div class="observablehq observablehq--block"><!--:8a45bc0a:--></div>
+<div class="observablehq observablehq--block"><!--:52383d38:--></div>
+<div class="observablehq observablehq--block"><!--:aab9202c:--></div>
+<div class="observablehq observablehq--block"><!--:661825a6:--></div>
+</main>
+<footer id="observablehq-footer">
+<div><a href="https://sharonhoward.org" target="_blank" rel="noopener noreferrer">Sharon Howard</a> | Unless otherwise stated, code and visualisations are <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY SA 4.0</a>.</div>
+</footer>
+</div>
+</body>
+</html>

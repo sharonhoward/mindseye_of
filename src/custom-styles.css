@@ -1,0 +1,40 @@
+@import url("observablehq:default.css");
+@import url("observablehq:theme-air.css");
+
+
+:root {
+  --theme-foreground-focus: #AD4343;
+}
+
+
+span.navbar-title {
+	font-weight: 500;
+	font-size: 1.3rem;
+	padding-right: 25px;
+}
+
+span.navbar-title a {
+	text-decoration: none;
+}
+
+h1 {max-width: 100% !important}
+
+
+/* based on css styles from mindseye */
+
+.navbar-dark .navbar-brand {
+  /*background: url('./profile_squ.jpg');*/
+  background-size: contain;
+  padding-right: 5px !important; 
+  padding-left: 75px !important;
+  background-repeat: no-repeat;
+  color: #AD4343;
+}
+
+
+.nav-footer {
+	background: #f4eee8;
+/*	min-height: 4em; */
+}
+
+
