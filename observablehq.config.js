@@ -26,7 +26,7 @@ export default {
   // theme: "default", // try "light", "dark", "slate", etc.
   //style: "./styles.css", // doesn't work here but does work in page yaml so.
   header: 
-  "<navbar><span class='navbar-title'><a href='https://mindseye.sharonhoward.org/'>In Her Mind's Eye</a></span> <span class='menu-text'><a href='https://mindseye.sharonhoward.org/dashboards/'>Dashboards</a></span></navbar>", // hardcode links...
+  "<navbar><span class='navbar-title'><a href='https://mindseye.sharonhoward.org/' target='_self'>In Her Mind's Eye</a></span> <span class='menu-text'><a href='https://mindseye.sharonhoward.org/dashboards/' target='_self'>Dashboards</a></span></navbar>", // hardcode links... need  target='_self' to stop these opening in a new window ffs.
   
    footer: "<a href='https://sharonhoward.org'>Sharon Howard</a> | Unless otherwise stated, code and visualisations are <a href='http://creativecommons.org/licenses/by-sa/4.0/'>CC BY SA 4.0</a>.", // what to show in the footer (HTML)
    
