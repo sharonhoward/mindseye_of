@@ -74,7 +74,8 @@ Inputs.form(
 <h2>Sources</h2>
 
 - [Westminster coroners' inquests data](https://doi.org/10.5281/zenodo.4402837) ([London Lives](https://www.londonlives.org/)) 
-- [London weekly bills of mortality, 1644-1849](https://reshare.ukdataservice.ac.uk/854104/) ([Campop](https://www.campop.geog.cam.ac.uk/research/projects/migrationmortalitymedicalisation/)).
+- [London weekly bills of mortality, 1644-1849](https://reshare.ukdataservice.ac.uk/854104/) ([Campop](https://www.campop.geog.cam.ac.uk/research/projects/migrationmortalitymedicalisation/))
+- [Locating London's Past map data](https://www.locatinglondon.org/about/data-downloads)
 
 <h2>See also</h2>
 
